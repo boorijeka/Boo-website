@@ -1,0 +1,224 @@
+body {
+  background: #000000;
+}
+@font-face {
+  font-family: "boo-font";
+  src: url("../font/Antipasto\ ExtraLight.otf") format("opentype");
+
+}
+@media screen and (max-width: 768px) { 
+  h1{font-size: 5rem;}
+  body{font-size:5rem;}
+  .sightlight{font-size: smaller;}
+  .light{font-size: smaller;}
+  .sight{font-size: smaller;}
+  
+}
+h2 {
+  font-family: "boo-font";
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10rem;
+  line-height: 0.75;
+}
+
+span {
+  display: block;
+}
+
+span:not(.light):not(.sight):not(.sightlight) {
+  opacity: 0;
+  animation: flashText 0.5s ease-out alternate infinite;
+}
+
+span.sightlight {
+  opacity: 0;
+  animation: flashText 0.5s ease-out alternate infinite;
+  animation-delay: 0.2s;
+}
+
+span.light {
+  position: relative;
+  display: inline-block;
+}
+span.light:before {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 120%;
+  background: #fff;
+  filter: blur(10px);
+  content: "";
+  opacity: 0;
+  animation: flash 0.5s ease-out alternate infinite;
+  animation-delay: 0.2s;
+}
+
+span.sight {
+  position: relative;
+  display: inline-block;
+}
+span.sight:before {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 120%;
+  background: #fff;
+  filter: blur(10px);
+  content: "";
+  opacity: 0;
+  animation: flash 0.5s ease-out alternate infinite;
+}
+
+@keyframes flash {
+  to {
+    opacity: 0.8;
+  }
+}
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
+}
+.m-fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 500ms, opacity 500ms;
+}
+
+.m-fadeOutvid {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 1000ms, opacity 1000ms;
+}
+
+.fade-in-image {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+videopos {
+  position: absolute;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: -250px;
+  margin: 20px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  opacity: 0.8;
+  /* for demo purpose  */
+}
+
+.stack-top {
+  z-index: 9;
+  left: -200px;
+  margin: 20px;
+  /* for demo purpose  */
+}
+
+.page-header {
+  background-color: #000000;
+  height: 100vh;
+}
+
+.page-header:after {
+  animation: grain 8s steps(10) infinite;
+  background-color: #000000;
+  background-image: url(https://mynoise.net/Data/WHITE/fb.jpg);
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.17;
+  position: fixed;
+  top: -110%;
+  width: 300%;
+}
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}

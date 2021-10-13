@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8">
+  <title>Boo &mdash; Software i design</title>
+  <link rel="icon" href="images/favicon.png">
+  <!--  Styles  -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css.map">
+</head>
+  
+<body  onclick="myfunction()"  >
+  <div   >
+    <center>
+  <h2 class="page-header" onclick="myfunction()" id="ovajdiv" >
+  <span class="sightlight">There's</span>  
+  <span class="light">light</span> 
+  <span> even in</span> 
+  <span class="sight">the darkest</span>  
+  <span>places</span>
+    </center>
+    </div>
+</h2>
+  <center>
+    <div id="ovodiv" >
+  <video width=1152 height=864 style="visibility: hidden;" id="video" style="position:relative; left:160px; top:2px;">
+    <source src="images/0586baf6-695c-45bd-8afd-836dbacf76a5 (1).mp4"
+            type="video/mp4" id="video1" >
+    </center>
+      </div>
+    <script>
+     function  myfunction()
+      {
+        var tekst=document.getElementById("ovajdiv");
+        var vid=document.getElementById("video");
+       tekst.classList.add("m-fadeOut");
+         setTimeout(function(){
+            tekst.remove();
+            vid.style.visibility = "visible";
+            vid.play();
+            vid.classList.add("fade-in-image");
+         }, 1000);
+                    setTimeout(function(){
+                 document.getElementById("ovodiv").classList.add("m-fadeOut");
+                       setTimeout(function(){
+                 document.getElementById("ovodiv").remove();
+            }, 2000);
+            window.location.href = "/Front.html";
+         }, 3000);
+      }
+    </script>
+    
+</body>
+  
+</html>
